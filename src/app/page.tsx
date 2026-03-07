@@ -1,14 +1,14 @@
 "use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
-import NavbarLayoutFloatingInline from "@/components/navbar/NavbarLayoutFloatingInline";
-import HeroCentered from "@/components/sections/hero/HeroCentered";
-import InlineImageSplitTextAbout from "@/components/sections/about/InlineImageSplitTextAbout";
-import FeatureBorderGlow from "@/components/sections/feature/featureBorderGlow/FeatureBorderGlow";
-import ProductCardTwo from "@/components/sections/product/ProductCardTwo";
-import TestimonialCardTwo from "@/components/sections/testimonial/TestimonialCardTwo";
-import ContactSplit from "@/components/sections/contact/ContactSplit";
-import FooterSimple from "@/components/sections/footer/FooterSimple";
+import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
+import HeroCentered from '@/components/sections/hero/HeroCentered';
+import InlineImageSplitTextAbout from '@/components/sections/about/InlineImageSplitTextAbout';
+import FeatureBorderGlow from '@/components/sections/feature/featureBorderGlow/FeatureBorderGlow';
+import ProductCardTwo from '@/components/sections/product/ProductCardTwo';
+import TestimonialCardTwo from '@/components/sections/testimonial/TestimonialCardTwo';
+import ContactSplit from '@/components/sections/contact/ContactSplit';
+import FooterSimple from '@/components/sections/footer/FooterSimple';
 import { BarChart3, Palette, Smartphone, Zap } from "lucide-react";
 
 export default function LandingPage() {
@@ -19,7 +19,7 @@ export default function LandingPage() {
       borderRadius="pill"
       contentWidth="medium"
       sizing="mediumLargeSizeLargeTitles"
-      background="blurBottom"
+      background="circleGradient"
       cardStyle="glass-depth"
       primaryButtonStyle="primary-glow"
       secondaryButtonStyle="layered"
@@ -43,7 +43,7 @@ export default function LandingPage() {
         <HeroCentered
           title="Where Vision Meets Design Excellence"
           description="We craft minimal, modern websites that drive results. Break Point Web Studio specializes in creating beautiful, conversion-focused digital experiences that stand out."
-          background={{ variant: "blurBottom" }}
+          background={{ variant: "plain" }}
           avatars={[
             {
               src: "http://img.b2bpic.net/free-photo/serene-businessman-with-glasses_1098-719.jpg",              alt: "Team member 1"},
@@ -70,7 +70,6 @@ export default function LandingPage() {
           ]}
           buttons={[{ text: "Learn More", href: "#features" }]}
           buttonAnimation="slide-up"
-          textboxLayout="default"
           useInvertedBackground={false}
         />
       </div>
