@@ -3,7 +3,7 @@
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleFullscreen from "@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen";
 import HeroPersonalLinks from "@/components/sections/hero/HeroPersonalLinks";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Twitter, Linkedin, Github, Instagram } from "lucide-react";
 
 export default function Home() {
   return (
@@ -34,6 +34,12 @@ export default function Home() {
         <HeroPersonalLinks
           background={{ variant: "plain" }}
           title="Break Point"
+          socialLinks={[
+            { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
+            { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
+            { icon: Github, label: "GitHub", href: "https://github.com" },
+            { icon: Instagram, label: "Instagram", href: "https://instagram.com" },
+          ]}
           linkCards={[
             {
               icon: Sparkles,
