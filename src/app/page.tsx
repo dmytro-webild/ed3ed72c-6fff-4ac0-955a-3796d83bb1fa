@@ -3,7 +3,7 @@
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleFullscreen from "@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen";
 import HeroPersonalLinks from "@/components/sections/hero/HeroPersonalLinks";
-import { Sparkles, Twitter, Linkedin, Github, Instagram } from "lucide-react";
+import { Sparkles, Twitter, Linkedin, Github, Instagram, Briefcase, Mail, FileText } from "lucide-react";
 
 export default function Home() {
   return (
@@ -45,6 +45,24 @@ export default function Home() {
               icon: Sparkles,
               title: "Modern Web Design",              description: "Beautiful, conversion-focused digital experiences",              button: {
                 text: "Learn More",                href: "/about"
+              },
+            },
+            {
+              icon: Briefcase,
+              title: "Our Portfolio",              description: "Explore our latest projects and case studies",              button: {
+                text: "View Work",                href: "/portfolio"
+              },
+            },
+            {
+              icon: FileText,
+              title: "Services",              description: "Discover what we offer and how we can help",              button: {
+                text: "See Services",                href: "/services"
+              },
+            },
+            {
+              icon: Mail,
+              title: "Get in Touch",              description: "Let's talk about your next project",              button: {
+                text: "Contact Us",                href: "/contact"
               },
             },
           ]}
