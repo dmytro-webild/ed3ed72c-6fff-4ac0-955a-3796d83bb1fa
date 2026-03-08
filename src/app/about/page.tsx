@@ -1,6 +1,6 @@
 "use client";
 
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleFullscreen from "@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen";
 import FeatureBorderGlow from "@/components/sections/feature/featureBorderGlow/FeatureBorderGlow";
 import TestimonialCardTwelve from "@/components/sections/testimonial/TestimonialCardTwelve";
@@ -20,15 +20,17 @@ export default function AboutPage() {
       secondaryButtonStyle="glass"
       headingFontWeight="bold"
     >
-      <NavbarStyleFullscreen
-        navItems={[
-          { name: "Home", id: "/" },
-          { name: "About", id: "/about" },
-        ]}
-        brandName="Break Point"
-        bottomLeftText="Global Community"
-        bottomRightText="hello@breakpoint.studio"
-      />
+      <div id="nav" data-section="nav">
+        <NavbarStyleFullscreen
+          navItems={[
+            { name: "Home", id: "/" },
+            { name: "About", id: "/about" },
+          ]}
+          brandName="Break Point"
+          bottomLeftText="Global Community"
+          bottomRightText="hello@breakpoint.studio"
+        />
+      </div>
 
       {/* Opening Statement */}
       <div
@@ -95,15 +97,18 @@ export default function AboutPage() {
             {
               icon: Zap,
               title: "Strategy: Find the Break",              description:
-                "We discover the breaking points in your current digital experience. Through research and analysis, we identify where your website fails to adapt and where opportunities exist."},
+                "We discover the breaking points in your current digital experience. Through research and analysis, we identify where your website fails to adapt and where opportunities exist."
+            },
             {
               icon: Code,
               title: "Craft: Clean Code Meets Aesthetic",              description:
-                "We build with precision and beauty. Our code is clean, maintainable, and performant. Every pixel serves a purpose. Every interaction feels intentional."},
+                "We build with precision and beauty. Our code is clean, maintainable, and performant. Every pixel serves a purpose. Every interaction feels intentional."
+            },
             {
               icon: CheckCircle,
               title: "Launch: Rigorous Testing",              description:
-                "Before launch, we test across every device, every browser, every user scenario. We ensure your website doesn't just work—it excels."},
+                "Before launch, we test across every device, every browser, every user scenario. We ensure your website doesn't just work—it excels."
+            },
           ]}
         />
       </div>
@@ -113,16 +118,21 @@ export default function AboutPage() {
         <TestimonialCardTwelve
           testimonials={[
             {
-              id: "1",              name: "Team Member 1",              imageSrc: "https://api.dicebear.com/7.x/avataaars/svg?seed=1"},
+              id: "1",              name: "Team Member 1",              imageSrc: "https://api.dicebear.com/7.x/avataaars/svg?seed=1"
+            },
             {
-              id: "2",              name: "Team Member 2",              imageSrc: "https://api.dicebear.com/7.x/avataaars/svg?seed=2"},
+              id: "2",              name: "Team Member 2",              imageSrc: "https://api.dicebear.com/7.x/avataaars/svg?seed=2"
+            },
             {
-              id: "3",              name: "Team Member 3",              imageSrc: "https://api.dicebear.com/7.x/avataaars/svg?seed=3"},
+              id: "3",              name: "Team Member 3",              imageSrc: "https://api.dicebear.com/7.x/avataaars/svg?seed=3"
+            },
             {
-              id: "4",              name: "Team Member 4",              imageSrc: "https://api.dicebear.com/7.x/avataaars/svg?seed=4"},
+              id: "4",              name: "Team Member 4",              imageSrc: "https://api.dicebear.com/7.x/avataaars/svg?seed=4"
+            },
           ]}
           cardTitle="We love edge cases. They're where the magic happens."
           cardTag="Team Philosophy"
+          cardAnimation="none"
           useInvertedBackground={false}
         />
       </div>
