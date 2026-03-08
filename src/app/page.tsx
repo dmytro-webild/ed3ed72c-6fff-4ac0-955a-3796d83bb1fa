@@ -1,6 +1,6 @@
 "use client";
 
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleFullscreen from "@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen";
 import HeroPersonalLinks from "@/components/sections/hero/HeroPersonalLinks";
 import { Sparkles } from "lucide-react";
@@ -19,15 +19,17 @@ export default function Home() {
       secondaryButtonStyle="glass"
       headingFontWeight="bold"
     >
-      <NavbarStyleFullscreen
-        navItems={[
-          { name: "Home", id: "/" },
-          { name: "About", id: "/about" },
-        ]}
-        brandName="Break Point"
-        bottomLeftText="Global Community"
-        bottomRightText="hello@breakpoint.studio"
-      />
+      <div id="nav" data-section="nav">
+        <NavbarStyleFullscreen
+          navItems={[
+            { name: "Home", id: "/" },
+            { name: "About", id: "/about" },
+          ]}
+          brandName="Break Point"
+          bottomLeftText="Global Community"
+          bottomRightText="hello@breakpoint.studio"
+        />
+      </div>
       <div id="hero" data-section="hero">
         <HeroPersonalLinks
           background={{ variant: "plain" }}
@@ -36,7 +38,8 @@ export default function Home() {
             {
               icon: Sparkles,
               title: "Modern Web Design",              description: "Beautiful, conversion-focused digital experiences",              button: {
-                text: "Learn More",                href: "/about"},
+                text: "Learn More",                href: "/about"
+              },
             },
           ]}
         />
