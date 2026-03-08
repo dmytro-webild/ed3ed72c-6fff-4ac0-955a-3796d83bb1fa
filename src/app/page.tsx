@@ -33,7 +33,7 @@ export default function Home() {
       <div id="hero" data-section="hero">
         <HeroPersonalLinks
           background={{ variant: "plain" }}
-          title="Break Point"
+          title="Premium Web Design & Development"
           socialLinks={[
             { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
             { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
