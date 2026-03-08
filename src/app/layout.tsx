@@ -1,51 +1,35 @@
 import type { Metadata } from "next";
-import { Public_Sans } from "next/font/google";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ServiceWrapper } from "@/components/ServiceWrapper";
-import Tag from "@/tag/Tag";
+import { ServiceWrapper } from "@/providers/serviceWrapper/ServiceWrapper";
+import { Tag } from "@/components/tag/Tag";
 
-const publicSans = Public_Sans({
-  variable: "--font-public-sans",  subsets: ["latin"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",  subsets: ["latin"],
-});
+const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Break Point Web Studio | Minimal Modern Web Design",  description: "Award-winning web design studio specializing in minimal, modern websites that convert. Strategic design for SaaS, e-commerce, and digital agencies.",  keywords: "web design, minimal design, modern websites, web studio, digital design, responsive design, UX/UI",  metadataBase: new URL("https://breakpointwebstudio.com"),
-  alternates: {
-    canonical: "https://breakpointwebstudio.com"},
-  openGraph: {
-    title: "Break Point Web Studio | Exceptional Web Design",    description: "We craft minimal, modern websites that drive results and stand out.",    url: "https://breakpointwebstudio.com",    siteName: "Break Point Web Studio",    type: "website",    images: [
-      {
-        url: "https://breakpointwebstudio.com/og-image.jpg",        alt: "Break Point Web Studio - Modern Web Design"},
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",    title: "Break Point Web Studio",    description: "Minimal, modern web design that converts.",    images: ["https://breakpointwebstudio.com/twitter-image.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+  title: "Break Point - Web Design Studio",  description: "Minimal, modern websites that drive results. Break Point Web Studio specializes in creating beautiful, conversion-focused digital experiences."};
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <ServiceWrapper>
-        <body
-          className={`${publicSans.variable} ${inter.variable} antialiased`}
-        >
+      <body className={`${inter.variable}`}>
+        <ServiceWrapper>
           <Tag />
           {children}
-        
+        </ServiceWrapper>
+        <script
+          async
+          src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"
+        ></script>
+        <script
+          async
+          src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"
+        ></script>
+      
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -1413,7 +1397,6 @@ export default function RootLayout({
           }}
         />
       </body>
-      </ServiceWrapper>
     </html>
   );
 }
