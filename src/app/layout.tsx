@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ServiceWrapper } from "@/providers/serviceWrapper/ServiceWrapper";
-import { Tag } from "@/components/tag/Tag";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Break Point - Web Design Studio",  description: "Minimal, modern websites that drive results. Break Point Web Studio specializes in creating beautiful, conversion-focused digital experiences."};
+  title: "Break Point - Web Design Studio",  description: "Minimal, modern websites that drive results. Break Point Web Studio specializes in creating beautiful, conversion-focused digital experiences."
+};
 
 export default function RootLayout({
   children,
@@ -17,10 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable}`}>
-        <ServiceWrapper>
-          <Tag />
-          {children}
-        </ServiceWrapper>
+        {children}
         <script
           async
           src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"
